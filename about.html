@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me 🚀</title>
+  <link rel="stylesheet" href="stye.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  });
+
+  document.querySelectorAll('.card-section, .about-hero').forEach(el => {
+    el.classList.add('scroll-reveal');
+    observer.observe(el);
+  });
+</script>
+<script>
+  const heroText = "Hi, I'm Chirag 👋";
+  const h1 = document.querySelector('.about-hero h1');
+  h1.innerHTML = '';
+  let i = 0;
+
+  function typeWriter() {
+    if (i < heroText.length) {
+      h1.innerHTML += heroText.charAt(i);
+      i++;
+      setTimeout(typeWriter, 80);
+    }
+  }
+
+  typeWriter();
+</script>
+<script>
+  const topBtn = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', () => {
+    topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+  });
+</script>
+
+
+<body>
+
+  <!-- Black Hole Background -->
+  <div class="blackhole-bg"></div>
+ 
+  <!-- Starfield and Comet -->
+  <div class="stars twinkle"></div>
+  <div class="comet"></div>
+
+  <!-- Floating Ethereum Icon -->
+  <div class="eth-planet"></div>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <h1>Hi, I'm Chirag 👋</h1>
+    <p class="intro">
+      An aspiring full-stack developer 🚀 who’s passionate about building cool digital products, exploring modern tech, and turning ideas into real user experiences.
+    </p>
+    <a href="projects.html" class="cta-button">View My Projects 🔍</a>
+  </section>
+
+  <!-- Grouped Sections: Row 1 -->
+  <div class="section-row">
+    <section class="card-section">
+      <h2>🌐 Who Am I?</h2>
+      <p>I'm a recent high school graduate planning to major in Computer Science and minor in Marketing...</p>
+    </section>
+
+    <section class="card-section">
+      <h2>📈 Mission</h2>
+      <p>To do nothing </p>
+    </section>
+
+    <section class="card-section">
+      <h2>🧠 My Skills</h2>
+      <ul class="skill-list">
+        <li><div class="skill-label"><span>💻 HTML</span><span class="percentage">90%</span></div><div class="skill-bar"><div class="fill" style="width:90%"></div></div></li>
+        <li><div class="skill-label"><span>🎨 CSS</span><span class="percentage">85%</span></div><div class="skill-bar"><div class="fill" style="width:85%"></div></div></li>
+        <li><div class="skill-label"><span>🐍 Python</span><span class="percentage">80%</span></div><div class="skill-bar"><div class="fill" style="width:80%"></div></div></li>
+        <li><div class="skill-label"><span>📜 JavaScript</span><span class="percentage">75%</span></div><div class="skill-bar"><div class="fill" style="width:75%"></div></div></li>
+        <li><div class="skill-label"><span>⚙️ C++</span><span class="percentage">65%</span></div><div class="skill-bar"><div class="fill" style="width:65%"></div></div></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Grouped Sections: Row 2 -->
+  <div class="section-row">
+    <section class="card-section">
+      <h2>🌍 Languages I Speak</h2>
+      <div class="language-table">
+        <div class="language-row"><span>English</span><span class="language-level">C1</span></div>
+        <div class="language-row"><span>Nepali</span><span class="language-level">C1</span></div>
+        <div class="language-row"><span>German</span><span class="language-level">B1–B2</span></div>
+        <div class="language-row"><span>Hindi</span><span class="language-level">B2</span></div>
+        <div class="language-row"><span>Russian</span><span class="language-level">A2</span></div>
+      </div>
+    </section>
+
+    <section class="card-section">
+      <h2>🎓 Academic Performance</h2>
+      <div class="gpa-table">
+        <div class="gpa-row"><span>Grade 10</span><span>3.95</span></div>
+        <div class="gpa-row"><span>Grade 11</span><span>3.87</span></div>
+        <div class="gpa-row"><span>Grade 12</span><span class="coming-soon">Coming Soon (UW 🎯)</span></div>
+      </div>
+    </section>
+
+    <section class="card-section">
+      <h2>🏅 Extra-Curricular Activities</h2>
+      <ul class="eca-list">
+        <li>🥇 Science and Math Olympiad - Rank 10/190</li>
+        <li>🧠 Integration BEE</li>
+        <li>🧪 Built apps and AI</li>
+        <li>💻 Built portfolio + dynamic websites</li>
+        <li>📢 Volunteered in sleeping competition</li>
+      </ul>
+    </section>
+  </div>
+  <div class="glow-cursor" id="glowCursor"></div>
+
+  <!-- Fixed Bottom Buttons -->
+<div class="cta-container">
+  <a href="index.html" class="cta-button">🏠 Home</a>
+
+  <a href="contact.html" class="cta-button">📩 Contact</a>
+</div>
+<a href="#" class="back-to-top" title="Back to top">🔼</a>
+
+</body>
+</html>

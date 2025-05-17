@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects 🚧</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('Bg copy.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      color: white;
+    }
+
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(white 1px, transparent 1px);
+      background-size: 2px 2px;
+      animation: twinkle 2s infinite ease-in-out alternate;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.06;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .main-message {
+      font-size: 48px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #00ffff, #6e00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowFlicker 1.5s infinite alternate;
+    }
+
+    .sub-message {
+      font-size: 18px;
+      margin-top: 20px;
+      color: rgba(255, 255, 255, 0.7);
+      animation: fadeIn 3s ease forwards;
+    }
+
+    .link-button {
+      display: inline-block;
+      margin-top: 40px;
+      font-size: 18px;
+      color: white;
+      background: linear-gradient(135deg, #6e00ff, #009fff);
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(110, 0, 255, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .link-button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px #6e00ff, 0 0 30px #009fff;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.03; }
+      to { opacity: 0.08; }
+    }
+
+    @keyframes glowFlicker {
+      0% { text-shadow: 0 0 10px #00ffff; opacity: 1; }
+      100% { text-shadow: 0 0 25px #6e00ff; opacity: 0.9; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="container">
+    <div class="main-message">🚧 NOTHING TO SHOW HERE</div>
+    <div class="sub-message">But you can <a href="contact.html" class="link-button">Contact the Nerd Alien 👽📡</a></div>
+  </div>
+</body>
+</html>

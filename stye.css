@@ -1,0 +1,313 @@
+body {
+  background-image: url('Bg copy.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  
+  
+  
+  }
+
+.about-hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.about-hero h1 {
+  font-size: 64px;
+  background: linear-gradient(135deg, pink, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro {
+  font-size: 24px;
+  max-width: 800px;
+  margin: 20px auto 40px;
+}
+
+.section-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 1800px;
+}
+
+.card-section {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(110, 0, 255, 0.3);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card-section:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2), 0 0 35px rgba(110, 0, 255, 0.4);
+}
+
+.card-section h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 18px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.15);
+}
+
+.skill-list, .eca-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.skill-bar {
+  background: rgba(255, 255, 255, 0.1);
+  height: 18px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(135deg, #6e00ff, #009fff);
+  border-radius: 10px 0 0 10px;
+}
+
+.language-table {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.language-row {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.07);
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.language-level {
+  font-style: italic;
+  color: #ccc;
+}
+
+.gpa-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.coming-soon {
+  font-style: italic;
+  color: #bbb;
+}
+.cta-container {
+  position: relative;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+  z-index: 9999;
+  width: max-content;
+}
+
+
+.cta-button {
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(135deg, #6e00ff, #009fff);
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(110, 0, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #6e00ff, 0 0 30px #009fff;
+}
+
+.blackhole-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 1000px;
+  background-image: url('blackhole copy.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: rotateBlackHole 60s linear infinite;
+  opacity: 0.3;
+  pointer-events: none;
+  filter:
+    drop-shadow(0 0 80px rgba(0, 153, 255, 0.6))
+    drop-shadow(0 0 120px rgba(0, 50, 255, 0.4))
+    brightness(1.1)
+    blur(1px);
+}
+
+
+@keyframes rotateBlackHole {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+@keyframes rotateBlackHole {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+/* Stars and comet */
+.stars.twinkle {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 2px 2px;
+  animation: twinkle 2s infinite ease-in-out alternate;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.06;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.03; }
+  to { opacity: 0.08; }
+}
+
+.comet {
+  position: fixed;
+  top: -50px;
+  left: -50px;
+  width: 2px;
+  height: 2px;
+  background: linear-gradient(45deg, white, transparent);
+  transform: rotate(45deg);
+  animation: shoot 8s linear infinite;
+  opacity: 0;
+}
+
+@keyframes shoot {
+  0% { transform: translate(0, 0) rotate(45deg); opacity: 0; }
+  10% { opacity: 1; }
+  20% { transform: translate(300px, 300px) rotate(45deg); opacity: 0; }
+  100% { transform: translate(1000px, 1000px) rotate(45deg); opacity: 0; }
+}
+
+/* Floating ETH icon */
+.eth-planet {
+  position: fixed;
+  bottom: 120px;
+  right: 40px;
+  width: 48px;
+  height: 48px;
+  background-image: url('https://cryptologos.cc/logos/ethereum-eth-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: floatEth 4s ease-in-out infinite;
+  z-index: 999;
+  opacity: 0.9;
+}
+
+@keyframes floatEth {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.planet-spin {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.spinning-planet {
+  width: 100%;
+  height: auto;
+  animation: spinPlanet 20s linear infinite;
+  transform-origin: center center;
+  filter: drop-shadow(0 0 30px rgba(0, 150, 255, 0.5));
+}
+
+@keyframes spinPlanet {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.glow-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #00ffff, transparent);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 99999;
+  transition: transform 0.05s linear;
+}
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-section:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px rgba(110, 0, 255, 0.4), 0 0 40px rgba(0, 255, 255, 0.2);
+}
+.back-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  font-size: 28px;
+  text-decoration: none;
+  color: #00ffff;
+  background: rgba(0,0,0,0.4);
+  padding: 10px 14px;
+  border-radius: 50%;
+  display: none;
+  z-index: 10000;
+  transition: background 0.3s ease;
+}
+.back-to-top:hover {
+  background: rgba(0,0,0,0.7);
+}
